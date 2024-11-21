@@ -22,8 +22,15 @@ export const fetchData = async (URL: string) => {
         }
         return {
             status: false,
+            linkResult: '',
+            linkOriginal: URL
         }
     } catch (error) {
         console.error(error);
+        return {
+            status: false,
+            linkResult: '',
+            linkOriginal: URL
+        }
     }
 }
