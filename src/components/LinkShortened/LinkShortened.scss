@@ -1,0 +1,105 @@
+@mixin noWrapParagraph {
+    width: 100%;
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+
+.linkShortened {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+
+    &-original {
+        border-bottom: 1px solid hsl(257, 7%, 63%);
+        padding-bottom: 10px;
+        font-weight: 500;
+        font-size: 14px;
+        @include noWrapParagraph();
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+
+        &-shortened {
+            font-size: 15px;
+            font-weight: 500;
+            color: hsl(180, 66%, 49%);
+            @include noWrapParagraph();
+
+            @media screen and (min-width: 768px) {
+                font-size: 16px;
+            }
+        }
+
+        &-btn {
+            background-color: hsl(180, 66%, 49%);
+            font-family: inherit;
+            font-weight: 600;
+            color: #fff;
+            text-transform: capitalize;
+            display: inline-block;
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 8px 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+
+            @media screen and (min-width: 768px) {
+                font-size: 16px;
+            }
+
+            &.btn-copied {
+                background-color: hsl(257, 27%, 26%);
+            }
+
+            &.error-copy {
+                background-color: hsl(0, 87%, 67%);
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .linkShortened {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        grid-gap: 30px;
+        align-items: center;
+        padding: 20px;
+
+        &-original {
+            border: none;
+            padding-bottom: 0;
+            grid-column: 1 / 2;
+            width: 100%;
+        }
+
+        &__content {
+            flex-direction: row;
+            align-items: center;
+            grid-column: 2 / 3;
+            width: 100%;
+            grid-gap: 15px;
+
+            &-shortened {
+                text-align: right;
+            }
+
+            &-btn {
+                padding: 8px 15px;
+            }
+        }
+    }
+}

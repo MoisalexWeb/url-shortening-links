@@ -1,0 +1,35 @@
+.cta {
+    background-color: hsl(180, 66%, 49%);
+    color: #fff;
+    display: block;
+    width: max-content;
+    height: max-content;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-transform: capitalize;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s, box-shadow 0.3s;
+
+    &--center,
+    &--centerLeft {
+        margin: 0 auto;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding: 12px 40px;
+        font-size: 17px;
+    }
+
+    @media screen and (min-width: 850px) {
+        &--centerLeft {
+            margin: 0;
+        }
+    }
+    
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 5px rgba(0,0,0,0.4);
+    }
+}

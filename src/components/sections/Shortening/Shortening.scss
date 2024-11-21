@@ -1,0 +1,101 @@
+.shortening {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 120px, rgba(239, 240, 245, 1) 120px);
+
+    &__container {
+        padding: 40px 0;
+    }
+
+    &__form {
+        background: hsl(257, 27%, 26%) url(/images/bg-boost-desktop.svg);
+        background-size: cover;
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    
+        &-input,
+        &-submit {
+            display: block;
+            border: none;
+            outline: none;
+            font-family: inherit;
+            font-size: 16px;
+            padding: 10px 5px;
+            background-color: hsl(230, 25%, 95%);
+            color: #626262;
+            border-radius: 5px;
+        }
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr max-content;
+            grid-column-gap: 30px;
+            padding: 50px 40px;
+
+            &-input {
+                padding: 10px;
+            }
+        }
+    
+        &-input::placeholder {
+            color: #626262;
+        }
+    
+        &-submit {
+            background-color: hsl(180, 66%, 49%);
+            color: #fff;
+            font-weight: 500;
+            margin-top: 20px;
+            cursor: pointer;
+
+            @media screen and (min-width: 768px) {
+                margin-top: 0;
+                padding: 10px 40px;
+            }
+        }
+    
+        &-error {
+            color: hsl(0, 87%, 67%);
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 5px;
+            font-style: italic;
+
+            @media screen and (min-width: 768px) {
+                grid-row: 2 / 3;
+                grid-column: 1 / 2;
+                font-size: 16px;
+            }
+        }
+    }
+
+    &__links {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        padding: 0 5px;
+    
+        &-delete {
+            display: inline-block;
+            font-size: 15px;
+            font-weight: 500;
+            font-family: inherit;
+            color: #fff;
+            background-color: hsl(180deg 54.15% 42.7%);
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 10px 20px;
+            max-width: 300px;
+            justify-self: center;
+            text-transform: capitalize;
+
+            @media screen and (min-width: 768px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

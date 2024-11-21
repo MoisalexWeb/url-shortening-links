@@ -1,0 +1,23 @@
+.boost {
+    background: hsl(257, 27%, 26%) url(/images/bg-boost-desktop.svg);
+    padding: 60px 0;
+    text-align: center;
+    background-size: cover;
+
+    &-title {
+        color: #fff;
+        font-weight: 700;
+        font-size: 25px;
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 650px) {
+            font-size: 30px;
+        }
+
+        @media screen and (min-width: 850px) {
+            font-size: 32px;
+        }
+    }
+}
