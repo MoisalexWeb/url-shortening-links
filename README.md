@@ -1,50 +1,82 @@
-# React + TypeScript + Vite
+# Frontend Mentor - Shortly URL shortening API Challenge solution
+  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a solution to the [Shortly URL shortening API Challenge challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-Currently, two official plugins are available:
+  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of contents
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Overview](#overview)
 
-- Configure the top-level `parserOptions` property like this:
+- [The challenge](#the-challenge)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- [Links](#links)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- [My process](#my-process)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- [Built with](#built-with)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- [What I learned](#what-i-learned)
+
+- [Author](#author)
+  
+
+## Overview
+  
+
+### The challenge
+
+Users should be able to:
+
+- View the optimal layout for the site depending on their device's screen size
+
+- Shorten any valid URL
+
+- See a list of their shortened links, even after refreshing the browser
+
+- Copy the shortened link to their clipboard in a single click
+
+- Receive an error message when the `form` is submitted if:
+
+- The `input` field is empty
+
+  
+  
+### Links
+
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/url-shortening-links-using-react-js-typescript-4Kmava_kTn)
+
+- Live Site URL: [Deployed on Netlify](https://url-shortening.netlify.app/)
+
+  
+
+## My process
+
+### Built with
+
+ - Semantic HTML5 markup
+
+- SASS
+
+- Mobile-first workflow
+
+- React JS
+
+- TypeScript
+
+  
+### What I learned
+
+This is my first project using React JS + TypeScript, I am happy about it. I learned how to type different types of data with TypeScript which I thought was pretty amazing.
+
+  
+## Author
+
+- Frontend Mentor- [@MoisalexWeb](https://www.frontendmentor.io/profile/MoisalexWeb)
+
+- Instagram - [@moisalexweb_sw](https://www.instagram.com/moisalexweb_sw)
+
+
+ 
